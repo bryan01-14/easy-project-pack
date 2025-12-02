@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Plus, RefreshCw, FileText, Hash, Building, Calendar, User, Trash2 } from 'lucide-react';
+import { Plus, RefreshCw, Hash, Settings } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -85,14 +85,20 @@ export default function Admin() {
   };
 
   return (
-    <main className="min-h-screen pt-24 pb-12">
+    <main className="min-h-screen pt-24 pb-12 bg-gradient-to-b from-secondary/5 to-background">
       <div className="container mx-auto px-4">
+        {/* Admin Badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 text-secondary text-sm font-medium mb-6">
+          <Settings className="h-4 w-4" />
+          Espace Administrateur
+        </div>
+
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
           <div>
-            <h1 className="text-3xl font-bold mb-2">Administration</h1>
+            <h1 className="text-3xl font-bold mb-2">Gestion des Diplômes</h1>
             <p className="text-muted-foreground">
-              Gérez les diplômes et reconstruisez l'arbre de Merkle
+              Ajoutez des diplômes et reconstruisez l'arbre de Merkle
             </p>
           </div>
           <div className="flex gap-3">
